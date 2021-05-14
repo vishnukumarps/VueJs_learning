@@ -8,7 +8,7 @@ import ClassAndStyleBindingExample from "../components/ClassAndStyleBindingExamp
 import ParentComponent from "../components/ParentComponent.vue";
 import LifeCycleExample from "../components/LifeCycleExample.vue";
 import ApiCallExample from "../components/ApiCallExample.vue";
-
+import WatcherExample from "../components/WatcherExample.vue";
 Vue.use(VueRouter);
 
 const routes = [
@@ -20,6 +20,10 @@ const routes = [
   {
     path:"/api",
     component:ApiCallExample
+  },
+  {
+    path:"/watcher",
+    component:WatcherExample
   },
   {
     path: "/life",

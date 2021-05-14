@@ -5,7 +5,9 @@ import Sample from "../components/Sample.vue";
 import ConditionaStatements from "../components/ConditionaStatements.vue";
 import TemplateExample from "../components/TemplateExample.vue";
 import ClassAndStyleBindingExample from "../components/ClassAndStyleBindingExample.vue";
-import  ParentComponent from "../components/ParentComponent.vue";
+import ParentComponent from "../components/ParentComponent.vue";
+import LifeCycleExample from "../components/LifeCycleExample.vue";
+import ApiCallExample from "../components/ApiCallExample.vue";
 
 Vue.use(VueRouter);
 
@@ -14,6 +16,14 @@ const routes = [
     path: "/",
     name: "Home",
     component: Home,
+  },
+  {
+    path:"/api",
+    component:ApiCallExample
+  },
+  {
+    path: "/life",
+    component:LifeCycleExample
   },
   {
     path: "/parent",

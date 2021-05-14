@@ -10,7 +10,8 @@
       <br />
       <input type="submit" />
     </form>
-
+    <input id="fileUploadControl" name="fileUploadControl" type="file" />
+    <button @click="launchSaveToOneDrive()">Save to OneDrive</button>
     <h2>Table2</h2>
     <table border="2" class="table">
       <tr>
@@ -28,7 +29,8 @@
     </table>
   </div>
 </template>
-
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@microsoft/microsoft-graph-client/lib/graph-js-sdk.js"></script>
+<script type="text/javascript" src="https://secure.aadcdn.microsoftonline-p.com/lib/1.0.0/js/msal.min.js"></script>
 <script>
 import axios from "axios";
 export default {
@@ -37,7 +39,37 @@ export default {
   methods: {
     submit(e) {
       console.log(this.postData);
+      axios
+        .post("https://jsonplaceholder.typicode.com/posts", this.postData)
+        .then((resp) => {
+          console.warn(resp);
+        });
       e.preventDefault();
+    },
+    launchSaveToOneDrive() {
+      alert("t");
+      var odOptions = {
+        clientId: "553d6b11-5aa4-477a-81d9-2b245ef45e39",
+        action: "save",
+        sourceInputElementId: "fileUploadControl",
+        sourceUri: "",
+        fileName: "file.txt",
+        openInNewWindow: true,
+        advanced: {},
+        success: function (files) {
+          /* success handler */
+        },
+        progress: function (percent) {
+          /* progress handler */
+        },
+        cancel: function () {
+          /* cancel handler */
+        },
+        error: function (error) {
+          /* error handler */
+        },
+      };
+      OneDrive.save(odOptions);
     },
   },
   data() {

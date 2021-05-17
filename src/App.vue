@@ -1,15 +1,18 @@
 <template>
   <div id="app">
     <div id="nav">
+       <router-link to="/ondrive">OnDrive</router-link> |
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link> |
       <router-link to="/sample">Sample</router-link> |
       <router-link to="/watcher">Watcher</router-link> |
+      <router-link to="/url/1">Url</router-link> |
       <router-link to="/temp">Template example </router-link>
     </div>
     <router-view />
   </div>
 </template>
+
 <script>
 export default {
   name: "",

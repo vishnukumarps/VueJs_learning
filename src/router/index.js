@@ -9,6 +9,8 @@ import ParentComponent from "../components/ParentComponent.vue";
 import LifeCycleExample from "../components/LifeCycleExample.vue";
 import ApiCallExample from "../components/ApiCallExample.vue";
 import WatcherExample from "../components/WatcherExample.vue";
+import UrlParaPassingExample from "../components/UrlParaPassingExample.vue";
+import GoogleDriveExample from "../components/GoogleDriveExample.vue";
 Vue.use(VueRouter);
 
 const routes = [
@@ -16,6 +18,14 @@ const routes = [
     path: "/",
     name: "Home",
     component: Home,
+  },
+  {
+    path: "/ondrive",
+    component: GoogleDriveExample
+  },
+  {
+    path:"/url:id",
+    component:UrlParaPassingExample
   },
   {
     path:"/api",
@@ -66,6 +76,7 @@ const routes = [
 
 const router = new VueRouter({
   routes,
+  mode: 'history'
 });
 
 export default router;

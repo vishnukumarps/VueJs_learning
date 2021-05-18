@@ -7,6 +7,7 @@
       <router-link to="/sample">Sample</router-link> |
       <router-link to="/watcher">Watcher</router-link> |
       <router-link to="/url/1">Url</router-link> |
+      <router-link to="/parent">Parent child component</router-link> |
       <router-link to="/temp">Template example </router-link>
     </div>
     <router-view />

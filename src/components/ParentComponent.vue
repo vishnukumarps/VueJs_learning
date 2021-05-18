@@ -2,6 +2,9 @@
   <div>
       <h1>This is a Parent component   {{title}}</h1>
       <child-component v-on:changeTitle="updateTitle($event)" />
+       <child-component>
+         Slot example
+       </child-component>
   </div>
 </template>
 <script>

@@ -11,6 +11,7 @@ import ApiCallExample from "../components/ApiCallExample.vue";
 import WatcherExample from "../components/WatcherExample.vue";
 import UrlParaPassingExample from "../components/UrlParaPassingExample.vue";
 import GoogleDriveExample from "../components/GoogleDriveExample.vue";
+import DynamicComponent from "../components/DynamicComponent.vue";
 Vue.use(VueRouter);
 
 const routes = [
@@ -18,6 +19,10 @@ const routes = [
     path: "/",
     name: "Home",
     component: Home,
+  },
+  {
+    path: "/dynamic",
+    component: DynamicComponent,
   },
   {
     path: "/ondrive",

@@ -12,6 +12,7 @@ import WatcherExample from "../components/WatcherExample.vue";
 import UrlParaPassingExample from "../components/UrlParaPassingExample.vue";
 import GoogleDriveExample from "../components/GoogleDriveExample.vue";
 import DynamicComponent from "../components/DynamicComponent.vue";
+import SignIn from "../components/SignIn.vue";
 Vue.use(VueRouter);
 
 const routes = [
@@ -19,6 +20,10 @@ const routes = [
     path: "/",
     name: "Home",
     component: Home,
+  },
+  {
+    path: "/signin",
+    component: SignIn,
   },
   {
     path: "/dynamic",

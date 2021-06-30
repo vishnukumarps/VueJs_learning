@@ -22,7 +22,7 @@ export default {
   methods: {
     updateTitle(title) {
       this.title = title;
-    },
+                                },
   },
   data() {
     return {

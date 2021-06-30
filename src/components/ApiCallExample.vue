@@ -72,15 +72,6 @@ export default {
       OneDrive.save(odOptions);
     },
   },
-  data() {
-    return {
-      postData: {
-        name: null,
-        age: null,
-      },
-      dataList: [],
-    };
-  },
   mounted() {
     axios.get("https://jsonplaceholder.typicode.com/posts").then((resp) => {
       console.warn(resp);
